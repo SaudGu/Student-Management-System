@@ -6,7 +6,7 @@
 #include "Instructor.h"
 using namespace std;
 
-class Course {
+class Course { // This class is used to store course information like code, name, time, capacity, and instructor.
 private:
     string code;
     string name;
