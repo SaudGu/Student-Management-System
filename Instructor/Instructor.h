@@ -3,11 +3,17 @@
 
 #include "User.h"
 
-class Instructor : public User {        //This is a derived class from User and it's called Instructor.
+class Instructor : public User {
+private:
+    string instructorID;
+
 public:
     Instructor();
-    Instructor(string i, string n);
-    void showRole() const override;
+    Instructor(string id, string n, string a, string e, string p);
+    ~Instructor();
+
+    void showRole() const;
+    string getInstructorID() const;
     void showInstructor() const;
 };
 
