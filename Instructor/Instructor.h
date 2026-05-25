@@ -3,7 +3,7 @@
 
 #include "User.h"
 
-class Instructor : public User {
+class Instructor : public User {        //This is a derived class from User and it's called Instructor
 private:
     string instructorID;
 
