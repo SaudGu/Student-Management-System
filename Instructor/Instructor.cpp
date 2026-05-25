@@ -1,16 +1,26 @@
 #include "Instructor.h"
 
 Instructor::Instructor() : User() {
+    instructorID = "0";
 }
 
-Instructor::Instructor(string i, string n) : User(i, n) {
+Instructor::Instructor(string id, string n, string a, string e, string p)
+    : User(n, a, e, p) {
+    instructorID = id;
+}
+
+Instructor::~Instructor() {
 }
 
 void Instructor::showRole() const {
     cout << "Instructor" << endl;
 }
 
+string Instructor::getInstructorID() const {
+    return instructorID;
+}
+
 void Instructor::showInstructor() const {
-    cout << "Instructor ID: " << id << endl;
-    cout << "Instructor Name: " << name << endl;
+    cout << "\nInstructor ID: " << instructorID << endl;
+    showInfo();
 }
