@@ -5,16 +5,22 @@
 #include <string>
 using namespace std;
 
-class User {            // this is the base class for the common user information
+class User {		 // this is the base class for the common user information
 protected:
-    string id;
     string name;
+    string address;
+    string email;
+    string phone;
+
 public:
     User();
-    User(string i, string n);
+    User(string n, string a, string e, string p);
+    virtual ~User();
+
     virtual void showRole() const;
-    string getId() const;
+
     string getName() const;
+    void showInfo() const;
 };
 
 #endif
